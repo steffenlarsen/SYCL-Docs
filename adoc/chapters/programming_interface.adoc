@@ -17736,14 +17736,12 @@ Where [code]#OP# is: [code]#&#, [code]#|#, [code]#^#.
 a@
 [source]
 ----
-marray<RET, NumElements> operatorOP(const DataT& lhs, const marray& rhs)
+marray<bool, NumElements> operatorOP(const DataT& lhs, const marray& rhs)
 ----
-   a@ Available only when: [code]#DataT != float && DataT != double && DataT != half#.
-
-Construct a new instance of the [code]#marray# class template with [code]#DataT = bool# and
-same NumElements as [code]#lhs# [code]#marray# with each element of the new [code]#marray# instance
-the result of an element-wise [code]#OP# logical operation between the [code]#lhs#
-scalar and each element of the [code]#rhs# [code]#marray#.
+   a@ Construct a new instance of the [code]#marray# class template with [code]#DataT = bool# and
+      same NumElements as [code]#lhs# [code]#marray# with each element of the new [code]#marray# instance
+      the result of an element-wise [code]#OP# logical operation between the [code]#lhs#
+      scalar and each element of the [code]#rhs# [code]#marray#.
 
 Where [code]#OP# is: [code]#&&#, [code]#||#.
 
